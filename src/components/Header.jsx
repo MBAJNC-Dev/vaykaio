@@ -1,17 +1,28 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Plane, Menu, X, Bell } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Plane, Menu, X, Bell, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { useAuth } from '@/contexts/AuthContext.jsx';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // In real app, check auth context
+  const { isAuthenticated, currentUser, signOut } = useAuth();
   const location = useLocation();
+  const navigate = useNavigate();
   const { trackEvent } = useAnalytics();
+
+  const handleLogout = async () => {
+    try {
+      await signOut();
+      navigate('/');
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -26,6 +37,8 @@ const Header = () => {
   const handleNavClick = (linkName) => {
     trackEvent('nav_click', { link: linkName });
   };
+
+  const userInitial = currentUser?.name?.[0]?.toUpperCase() || currentUser?.email?.[0]?.toUpperCase() || 'V';
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md border-b border-border/50 shadow-sm py-3' : 'bg-transparent py-4 md:py-5'}`}>
@@ -76,18 +89,27 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            {isLoggedIn ? (
+            {isAuthenticated ? (
               <>
-                <button className={`p-2 rounded-lg transition-colors hover:bg-muted/50 relative ${isScrolled ? 'text-foreground' : 'text-white'}`}>
+                <Link to="/notifications" className={`p-2 rounded-lg transition-colors hover:bg-muted/50 relative ${isScrolled ? 'text-foreground' : 'text-white'}`}>
                   <Bell className="w-5 h-5" />
                   <span className="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
-                </button>
-                <div className="flex items-center gap-2 pl-4 border-l border-border">
-                  <Avatar className="w-8 h-8">
-                    <AvatarFallback className="bg-primary text-primary-foreground text-xs">V</AvatarFallback>
-                  </Avatar>
-                  <button className={`text-sm font-medium ${isScrolled ? 'text-foreground' : 'text-white'}`}>
-                    ▼
+                </Link>
+                <div className="flex items-center gap-3 pl-4 border-l border-border">
+                  <Link to="/dashboard" className="flex items-center gap-2">
+                    <Avatar className="w-8 h-8">
+                      <AvatarFallback className="bg-primary text-primary-foreground text-xs">{userInitial}</AvatarFallback>
+                    </Avatar>
+                    <span className={`text-sm font-medium ${isScrolled ? 'text-foreground' : 'text-white'}`}>
+                      {currentUser?.name?.split(' ')[0] || 'Dashboard'}
+                    </span>
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className={`p-2 rounded-lg transition-colors hover:bg-muted/50 ${isScrolled ? 'text-muted-foreground' : 'text-white/70'}`}
+                    title="Log out"
+                  >
+                    <LogOut className="w-4 h-4" />
                   </button>
                 </div>
               </>
@@ -126,11 +148,12 @@ const Header = () => {
           <Link to="/about" className="block text-foreground font-medium p-3 hover:bg-muted rounded-lg transition-colors">About</Link>
           <Link to="/blog" className="block text-foreground font-medium p-3 hover:bg-muted rounded-lg transition-colors">Blog</Link>
           <div className="h-px bg-border my-2"></div>
-          {isLoggedIn ? (
+          {isAuthenticated ? (
             <>
               <Link to="/dashboard" className="block text-foreground font-medium p-3 hover:bg-muted rounded-lg transition-colors">Dashboard</Link>
+              <Link to="/trips" className="block text-foreground font-medium p-3 hover:bg-muted rounded-lg transition-colors">My Trips</Link>
               <Link to="/settings" className="block text-foreground font-medium p-3 hover:bg-muted rounded-lg transition-colors">Settings</Link>
-              <button className="w-full text-left text-foreground font-medium p-3 hover:bg-muted rounded-lg transition-colors">Logout</button>
+              <button onClick={handleLogout} className="w-full text-left text-foreground font-medium p-3 hover:bg-muted rounded-lg transition-colors">Logout</button>
             </>
           ) : (
             <>
