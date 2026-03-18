@@ -1,0 +1,108 @@
+## Pages
+- [- VaykAIo AI`}](/guide): No description available
+- [- VaykAIo Profile](/profile): No description available
+- [| VaykAIo Group Dashboard](/grouptraveldashboard): No description available
+- [About - VaykAIo](/about): Learn about VaykAIo and our mission to transform vacation planning.
+- [Activity Library - Admin - VaykAIo AI](/activitylibrary): No description available
+- [Admin Dashboard - VaykAIo](/admindashboard): No description available
+- [AI Assistant - VaykAIo](/aiassistant): No description available
+- [AI Generated Itinerary - VaykAIo](/aiitinerarybuilder): No description available
+- [AI Journal Summaries - VaykAIo](/journalsummary): No description available
+- [AI Recommendations - VaykAIo](/airecommendations): No description available
+- [AI Restaurants - VaykAIo](/airestaurantrecommendations): No description available
+- [AI Scenario Planner | TravelMatrix](/aivacationplannerchat): No description available
+- [AI Vacation Planner | TravelMatrix](/aivacationplannerlanding): No description available
+- [Analytics - Admin - VaykAIo AI](/analytics): No description available
+- [Analytics - VaykAIo](/budgetanalytics): No description available
+- [API & Webhooks - VaykAIo Enterprise](/enterpriseapi): No description available
+- [Billing Settings - VaykAIo](/billing): No description available
+- [Blockchain Analytics](/blockchainanalytics): No description available
+- [Blog | VaykAIo AI](/blog): Travel tips, product updates, and industry insights.
+- [Budget - VaykAIo AI](/budget): No description available
+- [Budget Tracker - VaykAIo](/budgettracker): No description available
+- [Cancel Subscription - VaykAIo](/cancelsubscription): No description available
+- [Captured Places - VaykAIo](/placecapturemap): No description available
+- [Case Studies | VaykAIo AI](/casestudies): See how agencies and families use VaykAIo to transform their travel.
+- [Change Plan - VaykAIo](/upgradedowngrade): No description available
+- [Checklist - VaykAIo AI](/bookingchecklist): No description available
+- [Compare Quotes | TravelMatrix](/rfpcomparison): No description available
+- [Create New Trip - VaykAIo](/createtrip): Create and plan your next adventure with VaykAIo
+- [Create RFP | TravelMatrix](/createrfp): No description available
+- [Cross-Chain Bridge](/crosschainbridge): No description available
+- [Crypto Portfolio](/cryptoportfolio): No description available
+- [Custom Branding - VaykAIo Enterprise](/enterprisecustombranding): No description available
+- [DAO Governance](/daogovernance): No description available
+- [Dashboard - VaykAIo](/dashboard): No description available
+- [Decentralized Identity](/didprofile): No description available
+- [Delete Account - VaykAIo](/datadeletion): No description available
+- [Departments - VaykAIo Enterprise](/departmentmanagement): No description available
+- [Destination Library - Admin - VaykAIo AI](/destinationlibrary): No description available
+- [Discover | VaykAIo](/discovery): Discover restaurants, attractions, tours, and experiences.
+- [Enterprise Billing - VaykAIo](/enterprisebilling): No description available
+- [Enterprise Dashboard - VaykAIo](/enterpriseadmindashboard): No description available
+- [Example Trip: Japan - VaykAIo AI](/exampletrip): See a sample Japan trip itinerary created with VaykAIo AI. Explore Tokyo, Kyoto, and Osaka with AI-generated activities, restaurants, and budget breakdown.
+- [Expenses - VaykAIo](/expensetracking): No description available
+- [Export Data - VaykAIo](/dataexport): No description available
+- [Family Sharing | VaykAIo](/familysharing): No description available
+- [FAQ - VaykAIo](/faq): Frequently asked questions about VaykAIo vacation planning.
+- [Features - VaykAIo](/features): Discover VaykAIo
+- [Global Search - VaykAIo](/advancedsearch): No description available
+- [Group Management | TravelMatrix](/rfpgroupmanagement): No description available
+- [Hotels - VaykAIo AI](/hotels): No description available
+- [How It Works - VaykAIo AI](/howitworks): Learn how VaykAIo AI helps you plan your perfect trip in 4 simple steps: enter details, AI generates plan, customize, and book.
+- [Invoices - VaykAIo](/invoicemanagement): No description available
+- [Itinerary Builder - VaykAIo](/itinerarybuilder): No description available
+- [Loading Activities - VaykAIo AI](/activitiesmatrix): No description available
+- [Loading Itinerary - VaykAIo](/itinerary): No description available
+- [Loading Trip - VaykAIo](/tripoverview): No description available
+- [Log In | VaykAIo](/login): No description available
+- [Make a Payment - VaykAIo](/payment): No description available
+- [Manage Plans - Admin - VaykAIo AI](/adminplans): No description available
+- [Manage Users - Admin - VaykAIo AI](/adminusers): No description available
+- [Mint NFT - Web3](/nftminting): No description available
+- [My NFT Gallery](/nftgallery): No description available
+- [My Trips - VaykAIo AI](/savedtrips): No description available
+- [My Trips - VaykAIo](/triplist): Manage all your trips with VaykAIo
+- [New Entry - VaykAIo](/createjournalentry): No description available
+- [NFT Marketplace](/nftmarketplace): No description available
+- [Notifications - VaykAIo](/notifications): No description available
+- [Packing Checklist - VaykAIo AI](/packingchecklist): No description available
+- [Pay with Crypto](/cryptopayment): No description available
+- [Photo Editor | VaykAIo](/photoeditor): No description available
+- [Pricing - VaykAIo | AI Vacation Operating System](/pricing): Simple, transparent pricing for VaykAIo. Free plan for solo travelers, Pro for frequent explorers, Premium for power users. Start free today.
+- [Pricing & Plans - VaykAIo](/subscriptionplans): No description available
+- [Privacy Policy | VaykAIo AI](/privacypolicy): No description available
+- [Refine Plan | TravelMatrix](/aivacationplannerrefinement): No description available
+- [Restaurant Library - Admin - VaykAIo AI](/restaurantlibrary): No description available
+- [Restaurants - VaykAIo AI](/restaurants): No description available
+- [Review Options | TravelMatrix](/aivacationplannerreview): No description available
+- [RFP Communications | TravelMatrix](/rfpcommunication): No description available
+- [RFP Dashboard | TravelMatrix](/rfpdashboard): No description available
+- [RFP Notifications | TravelMatrix](/rfpnotifications): No description available
+- [RFP Templates | TravelMatrix](/rfptemplates): No description available
+- [RFP Tracking | TravelMatrix](/rfptracking): No description available
+- [Route Optimization - VaykAIo](/aitraveloptimization): No description available
+- [Saved Plans | TravelMatrix](/aivacationplannersaveplan): No description available
+- [Searching... | TravelMatrix](/aivacationplannersearch): No description available
+- [Security Settings - VaykAIo Enterprise](/enterprisesecurity): No description available
+- [Settings - VaykAIo](/settings): No description available
+- [Sign Up | VaykAIo](/signup): No description available
+- [Smart Albums - VaykAIo](/smartphotoalbums): No description available
+- [Smart Albums | VaykAIo](/tripalbums): No description available
+- [Smart Contracts - Web3](/smartcontractintegration): No description available
+- [Split Expenses - VaykAIo](/splitexpenses): No description available
+- [Staking & Yield](/staking): No description available
+- [Subscription Management - VaykAIo](/subscriptionmanagement): No description available
+- [Swap Tokens](/cryptoswap): No description available
+- [System Settings - Admin - VaykAIo AI](/adminsettings): No description available
+- [Team Management - VaykAIo Enterprise](/teammanagement): No description available
+- [Testimonials | VaykAIo AI](/testimonials): Read what our users have to say about VaykAIo.
+- [Transportation - VaykAIo AI](/transportation): No description available
+- [Travel Documents - VaykAIo AI](/traveldocuments): No description available
+- [Travel Journal - VaykAIo](/traveljournal): No description available
+- [VaykAIo Rewards - Loyalty Program](/loyaltyprogram): No description available
+- [Upload Photos - VaykAIo](/photoupload): No description available
+- [Vacation | Dashboard](/familytraveldashboard): No description available
+- [VaykAIo | Your AI Vacation Operating System](/home): VaykAIo: Your AI Vacation Command Center. Travel smarter, relax harder. Let AI handle the logistics while you enjoy every moment.
+- [Weather Insights - VaykAIo](/aiweathersuggestions): No description available
+- [Your Final Plan | TravelMatrix](/aivacationplannerfinalplan): No description available
