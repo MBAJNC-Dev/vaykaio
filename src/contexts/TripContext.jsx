@@ -47,7 +47,6 @@ export const TripProvider = ({ children, tripId: initialTripId }) => {
       try {
         const membersRecord = await pb.collection('trip_members').getList(1, 50, {
           filter: `trip_id = "${tripId}"`,
-          expand: 'user_id',
           $autoCancel: false,
         });
         members = membersRecord.items;
