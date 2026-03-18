@@ -192,11 +192,23 @@ export const AuthProvider = ({ children }) => {
   const isAdmin = profile?.role === 'admin';
   const isOwner = profile?.role === 'owner';
 
+  // Build the user model with profile data merged (for currentUser compat)
+  const currentUser = user ? {
+    id: user.id,
+    email: user.email,
+    name: profile?.name || user.user_metadata?.name || '',
+    avatar: profile?.avatar_url || user.user_metadata?.avatar_url || '',
+    role: profile?.role || 'guest',
+    ...profile,
+  } : null;
+
   const value = {
     user,
+    currentUser,        // Alias for components expecting currentUser
     session,
     profile,
     loading,
+    initialLoading: loading, // Alias for components expecting initialLoading
     signUp,
     signIn,
     signOut,
