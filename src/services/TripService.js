@@ -224,6 +224,106 @@ const TripService = {
       throw error;
     }
   },
+
+  // ââ Stats & Counts ââââââââââââââââââââââââââââââââââââââââââââââââââ
+
+  async getActivitiesCount(tripId) {
+    try {
+      const { count, error } = await supabase
+        .from('itinerary_items')
+        .select('*', { count: 'exact', head: true })
+        .eq('trip_id', tripId);
+
+      if (error) throw error;
+      return count || 0;
+    } catch (error) {
+      console.error(`Failed to get activities count for trip ${tripId}:`, error);
+      return 0;
+    }
+  },
+
+  async getPhotosCount(tripId) {
+    try {
+      const { count, error } = await supabase
+        .from('photos')
+        .select('*', { count: 'exact', head: true })
+        .eq('trip_id', tripId);
+
+      if (error) throw error;
+      return count || 0;
+    } catch (error) {
+      console.error(`Failed to get photos count for trip ${tripId}:`, error);
+      return 0;
+    }
+  },
+
+  async getJournalEntriesCount(tripId) {
+    try {
+      const { count, error } = await supabase
+        .from('journal_entries')
+        .select('*', { count: 'exact', head: true })
+        .eq('trip_id', tripId);
+
+      if (error) throw error;
+      return count || 0;
+    } catch (error) {
+      console.error(`Failed to get journal entries count for trip ${tripId}:`, error);
+      return 0;
+    }
+  },
+
+  async getBudgetSummary(tripId) {
+    try {
+      const { data, error } = await supabase
+        .from('expenses')
+        .select('amount')
+        .eq('trip_id', tripId);
+
+      if (error) throw error;
+
+      const totalSpent = (data || []).reduce((sum, expense) => sum + (Number(expense.amount) || 0), 0);
+      return { totalSpent };
+    } catch (error) {
+      console.error(`Failed to get budget summary for trip ${tripId}:`, error);
+      return { totalSpent: 0 };
+    }
+  },
+
+  async getUpcomingActivities(tripId, limit = 5) {
+    try {
+      const now = new Date().toISOString();
+      const { data, error } = await supabase
+        .from('itinerary_items')
+        .select('*')
+        .eq('trip_id', tripId)
+        .gte('start_time', now)
+        .order('start_time', { ascending: true })
+        .limit(limit);
+
+      if (error) throw error;
+      return data || [];
+    } catch (error) {
+      console.error(`Failed to get upcoming activities for trip ${tripId}:`, error);
+      return [];
+    }
+  },
+
+  async getActivityFeed(tripId, limit = 5) {
+    try {
+      const { data, error } = await supabase
+        .from('itinerary_items')
+        .select('*')
+        .eq('trip_id', tripId)
+        .order('updated_at', { ascending: false })
+        .limit(limit);
+
+      if (error) throw error;
+      return data || [];
+    } catch (error) {
+      console.error(`Failed to get activity feed for trip ${tripId}:`, error);
+      return [];
+    }
+  },
 };
 
 export default TripService;
