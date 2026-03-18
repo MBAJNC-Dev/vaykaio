@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { AdminAuthService } from '@/services/AdminAuthService.js';
 import { toast } from 'sonner';
-import pb from '@/lib/pocketbaseClient';
+import supabase from '@/lib/supabaseClient.js';
 
 const AdminContext = createContext(null);
 
@@ -28,11 +28,11 @@ export const AdminProvider = ({ children }) => {
 
     checkAuth();
 
-    const unsubscribe = pb.authStore.onChange(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
       checkAuth();
     });
 
-    return () => unsubscribe();
+    return () => subscription?.unsubscribe();
   }, []);
 
   const login = async (email, password) => {
